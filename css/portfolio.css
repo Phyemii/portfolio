@@ -1,38 +1,37 @@
-.title {
-    font-size: 5vh;
-    text-align: center;
-    margin-bottom: 8vh;
-    font-weight: bold;
-}
-
 /* sec01 */
 section.sec01 {
     width: 100%;
     height: 80vh;
-    background-image: linear-gradient(#F3EADA, #FFF9EE, transparent);
+    background-image: linear-gradient(145deg, #FFCBA7 30%, #FFDDBB 60%, #F3EADA);
 }
 
 section.sec01 .inner {
     width: 80%;
     vertical-align: middle;
-    padding: 25vh 0;
+    padding: 25vh 0 0;
     margin: 0 auto;
 }
 
 section.sec01 h1 {
-    font-size: 5em;
+    font-size: 16vh;
     font-weight: bold;
-    margin-bottom: 1em;
+    margin-bottom: 1vh;
+}
+
+section.sec01 h1 span.ti-cursor {
+    font-size: 16vh;
+    font-weight: normal;
+    margin-left: .5vw;
 }
 
 section.sec01 p {
-    font-size: 1rem;
-    margin-bottom: .5rem;
+    font-size: 10vh;
+    line-height: 1;
 }
 
 /* sec02 */
 section.sec02 {
-    padding: 0 0 10vh;
+    padding: 15vh 0;
 }
 
 section.sec02 .inner {
@@ -40,257 +39,56 @@ section.sec02 .inner {
     margin: 0 auto;
 }
 
-section.sec02 .ability {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
+.cateWrap {width: 100%;padding: 40px 0px;}
+.cateWrap ul {width: 100%;margin: 0 auto;font-size: 0;text-align: center;}
+.cateWrap ul li {display: inline-block;width: 10vw;margin-right: 12px;height: 5vh;line-height: 5vh;text-align: center;font-size: 2vh;border: 1px dashed #767676;color: #767676;background: #fff;border-radius: 50px;cursor:pointer;}
+.cateWrap ul li:nth-child(7n) {margin-right: 0;}
+.cateWrap ul li.active {font-weight: 500;border: 1px solid #f4534e;color: #f4534e;}
 
-section.sec02 .ability > div {
-    width: 100%;
-}
+.total {width: 1220px;margin: 37px auto 0;padding: 0 10px;box-sizing: border-box;}
+.total p {font-size: 16px;color: #191919;}
+.total p .cnt {color: #ee4a44;font-weight: 500;}
 
-section.sec02 .ability .cont_lt .imgWrap {
-    margin: 0 auto;
-    width: 80%;
-    height: 0;
-    padding-top: 80%;
-    border-radius: 100%;
-    position: relative;
-    overflow: hidden;
-}
+.contWrap {width: 8;margin: 40px auto 0;}
+.contWrap ul {font-size: 0;}
+.contWrap li {display: inline-block;width: calc((100% - 48px) / 3);margin: 0 8px;vertical-align: top;cursor: pointer; margin-bottom:50px;}
+.contWrap li.off {display:none;}
+.contWrap li:nth-child(3n) {/*margin-right: 0;*/}
+.contWrap li .imgWrap {width: 100%;height: 240px;position: relative;overflow: hidden;border-radius: 10px 10px 0 0;}
+.contWrap li .imgWrap img {width: 100%;height: auto;position: absolute;top: 0;bottom: 0;left: 0;right: 0;object-fit: cover;}
+.contWrap li .slider .imgWrap {display: none;}
+.contWrap li .slider .imgWrap:first-child {display: block;}
+.contWrap li .txtWrap {padding: 25px 20px;background: #f4f4f4;border-radius: 0 0 10px 10px;}
+.contWrap li .txtWrap .txtBx {display:none; color: #333333;font-size: 16px;line-height: 1.5;height: 50px;overflow: hidden;text-overflow: ellipsis;-webkit-line-clamp: 2; /* ¶óÀÎ¼ö */-webkit-box-orient: vertical;word-wrap:break-word;/* line-height °¡ 1.2em ÀÌ°í 3¶óÀÎÀ» ÀÚ¸£±â ¶§¹®¿¡ height´Â 1.2em * 3 = 3.6em */}
+.contWrap li .txtWrap .writer {color: #999999;font-size: 16px;margin-top: 10px;}
 
-section.sec02 .ability .cont_lt .imgWrap img {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-}
 
-section.sec02 .ability .cont_rt .rtTop {
-    font-size: .9em;
-    line-height: 1.5;
-}
 
-section.sec02 .ability .cont_rt .rtMid {
-    margin-top: 3vh;
-}
 
-section.sec02 .ability .cont_rt .rtMid li {
-    line-height: 2;
-    font-size: 0.9rem;
-}
+#popWrap {position: fixed;top: 50%;left: 50%;opacity:0;transform: translate(-50%,-50%);z-index: 101;}
+#popWrap h3 {text-align: center;font-size: 32px;color: #ffffff;font-weight: 500;margin-bottom: 30px;}
+#popWrap h3 .pop_pg {position: unset;}
+#popWrap .popCont {width: 980px;height: 540px;overflow: hidden;margin: 0 auto;}
+#popWrap .popCont ul {height:100%;}
+#popWrap .contBx {width: 980px;height: 540px;align-items: center;border-radius: 20px;overflow: hidden;}
+#popWrap .contBx .slider {background:#000; position:relative;}
+#popWrap .contBx .slick-arrow {position: absolute;top: 42%;transform: translateY(42%);width: 20px;height: 20px;border-radius: 50%;text-indent: -9999px;background: #000;z-index: 9;}
+#popWrap .contBx .slick-arrow.slick-prev {left: 20px;}
+#popWrap .contBx .slick-arrow.slick-next {right: 360px;}
+#popWrap .contBx .imgWrap {width: 640px !important;height: 540px;background: #000000;position: relative;overflow-y: scroll;}
+#popWrap .contBx .imgWrap img {position: absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;/* height: 100%; */object-fit: contain;}
+#popWrap .contBx .txtWrap {position: absolute;top: 0;right: 0;z-index: 99;width: 340px;background: #fff;box-sizing: border-box;border-radius: 0 20px 20px 0;height: 100%;font-size: 16px;color: #767676;line-height: 1.5;}
+#popWrap .contBx .txtWrap p {padding: 40px 30px;width: 100%;box-sizing: border-box;}
+#popWrap .contBx .txtWrap p.txtBx {display: -webkit-box; max-height: 455px; overflow: auto;}
+#popWrap .contBx .txtWrap p.writer {position: absolute;bottom: 0;border-top: 1px solid #dbdbdb;padding: 30px;}
+#popWrap .pop_prev, 
+#popWrap .pop_next {display: inline-block;width: 33px;height: 63px;background: center / 33px 63px no-repeat;}
+#popWrap .pop_next::after, 
+#popWrap .pop_prev::after {display: none;}
+#popWrap .pop_prev {left: -83px;background-image: url(/design/duduworld/220906/ico_pop_prev.png);}
+#popWrap .pop_next {right: -83px;background-image: url(/design/duduworld/220906/ico_pop_next.png);}
+#popWrap .pop_close {position: fixed;top: 6px;right: 26px;cursor:pointer}
 
-section.sec02 .ability .cont_rt .rtMid li i {
-    margin-right: 10px;
-    color: #FF8C5B;
-}
 
-section.sec02 .btn {
-    margin-top: 10vh;
-    font-size: 0;
-}
-
-section.sec02 .btn a {
-    display: inline-block;
-    color: #55433B;
-    border: 1px solid #55433B;
-    background: #fff;
-    padding: 15px 50px;
-    border-radius: 25px;
-    font-size: 1rem;
-    -webkit-transition: all .3s linear;
-    -o-transition: .3s all linear;
-    transition: all .3s linear;
-    border-style: solid;
-    background-size: 220% 100%;
-}
-
-section.sec02 .btn a:first-child {
-    color: #fff;
-    margin-right: 15px;
-    background-image: linear-gradient(to right, rgba(85,67,59,1) 50%, rgba(255,140,91,1) 50%);
-}
-
-section.sec02 .btn a:last-child {
-    background-image: linear-gradient(to right, transparent 50%, rgba(255,140,91,1) 50%);
-}
-
-section.sec02 .btn a:hover {
-    background-position: 95% 0;
-    border-color: transparent;
-    color: #fff;
-}
-
-section.sec02 .btn a:first-child:hover {
-    background-position: -90% 0%;
-}
-
-/* sec03 */
-section.sec03 {
-    width: 100%;
-    background-image: linear-gradient(145deg, #FFCBA7, #FFDDBB 60%, #F3EADA);
-}
-
-section.sec03 .inner {
-    width: 80%;
-    margin: 0 auto;
-    padding: 10vh 0;
-}
-
-section.sec03 .technic {
-    margin: 0 auto;
-}
-section.sec03 .technic .techTop {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-
-section.sec03 .technic .techTop > div {
-    width: 100%;
-}
-
-section.sec03 .technic .techTop .tech-item h2 {
-    font-weight: bold;
-    font-size: 2.5vh;
-}
-
-section.sec03 .technic .techTop .tech-item ul {
-    margin-top: 5vh;
-}
-
-section.sec03 .technic .techTop .tech-item ul li {
-    margin-bottom: 2vh;
-}
-
-section.sec03 .technic .techTop .tech-item ul li .tPer {
-    width: 100%;
-    height: 3vh;
-    border-radius: 3px;
-    background: rgba(255,255,255,.3);
-    margin-top: 1vh;
-}
-
-section.sec03 .technic .techTop .tech02 {
-    margin-left: 2vw;
-}
-
-section.sec03 .technic .techTop .tech-item ul li .tName {
-    font-size: 2vh;
-}
-
-section.sec03 .technic .techBtm {
-    margin-top: 10vh;
-    display: flex;
-    justify-content: space-evenly;
-}
-section.sec03 .technic .techTop .tech-item ul li:last-child {
-    margin-bottom: 0;
-}
-
-section.sec03 .technic .techBtm > div {width: 100%;margin-right: 2vw;text-align: left;background: #fff;border-radius: 25px;padding: 5vh 2vw;}
-
-section.sec03 .technic .techBtm > div:last-child {
-    margin-right: 0;
-}
-
-section.sec03 .technic .techBtm > div .tit {
-    font-size: 2.3vh;
-    font-weight: bold;
-    margin-bottom: 4vh;
-}
-
-section.sec03 .technic .techBtm > div .cont li {
-    line-height: 2;
-    font-size: 1.9vh;
-    list-style: inside;
-}
-
-section.sec04 .inner {
-    width: 80%;
-    margin: 10vh auto;
-}
-
-section.sec04 .licence {
-    display: flex;
-    justify-content: center;
-}
-
-section.sec04 .licence .wrap {
-    width: 100%;
-    margin-right: 2vw;
-    background: #eee;
-    padding: 5vh 2vw;
-    border-radius: 20px;
-}
-
-section.sec04 .licence > .wrap:last-child {
-    margin-right: 0;
-}
-
-section.sec04 .licence .wrap h2 {
-    font-size: 2.5vh;
-    font-weight: bold;
-    margin-bottom: 4vh;
-    text-align: center;
-}
-
-section.sec04 .licence .wrap li .tit {
-    font-size: 1.8vh;
-    letter-spacing: -.5px;
-}
-
-section.sec04 .licence .wrap li .info {
-    font-size: 1.6vh;
-    letter-spacing: -.5px;
-}
-
-section.sec04 .licence .wrap li {
-    line-height: 2;
-    margin-bottom: 1.5vh;
-}
-section.sec04 .licence .wrap li .info span + span::before {
-    content: "|";
-    display: inline-block;
-    margin: 0 .5vw;
-}
-.box {
-    width: 0;
-    height: 100%;
-    -webkit-transition: all 0.5s ease-in-out 0.7s;
-    -moz-transition: all 0.5s ease-in-out 0.7s;
-    -ms-transition: all 0.5s ease-in-out 0.7s;
-    -o-transition: all 0.5s ease-in-out 0.7s;
-    transition: all 0.5s ease-in-out 0.7s;
-}
-
-section.sec03 .technic .techTop.on .tech-item ul li .tPer .box {
-    background: #fff;
-    border-radius: 3px;
-}
-
-section.sec03 .technic .techTop.on .box.w40 {
-    width: 40%;
-}
-section.sec03 .technic .techTop.on .box.w50 {
-    width: 50%;
-}
-section.sec03 .technic .techTop.on .box.w60 {
-    width: 60%;
-}
-section.sec03 .technic .techTop.on .box.w70 {
-    width: 70%;
-}
-section.sec03 .technic .techTop.on .box.w80 {
-    width: 80%;
-}
-section.sec03 .technic .techTop.on .box.w90 {
-    width: 90%;
-}
-section.sec03 .technic .techTop.on .box.w100 {
-    width: 100%;
-}
+.dataWrap {display: none;}
+.layer-open {overflow:hidden;}

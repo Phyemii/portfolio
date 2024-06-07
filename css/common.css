@@ -68,6 +68,8 @@ footer .sec02 ul li a:hover {color: #fff;left: 5px;text-shadow: 1px 1px 2px #554
 
 
 /* element */
+#mask {display: none;position: fixed;top: 0;bottom: 0;left: 0;right: 0;width: 100%;height: 100%;background-color: rgba(0,0,0,.5);z-index: 99;}
+
 .point {color: #FF8C5B;}
 
 .goTop {display:none; position: fixed;bottom: 0;right: 2em;animation: top 1s;}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/portfolio.css">
-    <script src="./js/common.js"></script>
-    <!-- script src="./js/main.js"></script -->
     <!-- jQuery -->
     <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- typeIt-->
     <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
     <!-- icon -->
@@ -20,274 +21,584 @@
     <header class="flex">
         <div class="hLeft">
             <div class="logo">
-                <div class="img"></div>
+                <div class="img"><img src="https://cdn.example.com/img/logo.webp" alt="HYEMII 로고" loading="lazy"></div>
                 <div class="txt en">HYEMII</div>
             </div>
         </div>
         <div class="hRight">
             <div class="menu">menu</div>
             <ul>
-                <li><a href="/about" class="en">ABOUT ME</a></li>
-                <li><a href="/project" class="en">PROJECT</a></li>
-                <li><a href="/portfolio" class="on en">PORTFOLIO</a></li>
+                <li><a href="about.html" class="en">ABOUT ME</a></li>
+                <li><a href="project.html" class="en">PROJECT</a></li>
+                <li class="on"><a href="portfolio.html" class="en">PORTFOLIO</a></li>
             </ul>
         </div>
     </header>
     <section class="sec01">
         <div class="inner">
             <div class="txt">
-                <h1 class="en sentence fade fadeLt delay2">
-                    <p id="companionMethods"></p>
-                    <script>
-                        new TypeIt("#companionMethods", {
-                            speed: 250,
-                            waitUntilVisible: true,
-                            loop: true,
-                        })
-                        .delete(10)
-                        .type("INTUITIVE", { delay: 300 })
-                        .delete(9)
-                        .type("SEMANTIC", { delay: 300 })
-                        .delete(8)
-                        .type("FLEXIBLE", { delay: 300 })
-                        .delete(8)
-                        .type("RESPONSIVE", { delay: 300 })
-                        .delete(10)
-                        .type("SIMPLE", { delay: 300 })
-                        .delete(6)
-                        .type("CLEAN CODE")
-                        .go();
-                    </script>
-                </h1>
-                <div class="fade fadeRt delay3">
-                    <p>안녕하세요, <span class="point">4년차 웹퍼블리셔</span> 박혜민 입니다.</p>
-                    <p>모두를 위한 환경에서 성공적인 커뮤니케이션을 위해 노력하겠습니다.</p>
-                </div>
+                <h1 id="companionMethods" class="en sentence fade fadeLt delay2"></h1>
+                <p>PORTFOLIO</p>
+                <script>
+                    new TypeIt("#companionMethods", {
+                        speed: 250,
+                        waitUntilVisible: true,
+                        loop: true,
+                    })
+                    .delete(10)
+                    .type("INTUITIVE", { delay: 300 })
+                    .delete(9)
+                    .type("SEMANTIC", { delay: 300 })
+                    .delete(8)
+                    .type("FLEXIBLE", { delay: 300 })
+                    .delete(8)
+                    .type("RESPONSIVE", { delay: 300 })
+                    .delete(10)
+                    .type("SIMPLE", { delay: 300 })
+                    .delete(6)
+                    .type("CLEAN CODE")
+                    .go();
+                </script>
             </div>
         </div>
     </section>
     <section class="sec02">
         <div class="inner">
-            <div class="title fade fadeTop delay2">웹퍼블리셔</div>
-            <div class="ability">
-                <div class="cont_lt fade fadeLt delay3">
-                    <div class="imgWrap">
-                        <img src="./img/KakaoTalk_20240528_163322573.jpg" alt="내사진">
-                    </div>
+            <div class="cateWrap fade fadeTop delay1">
+                <ul>
+                    <li class="active">ALL</li>
+                    <li>전체 리뉴얼</li>
+                    <li>부분 리뉴얼</li>
+                </ul>
+            </div>
+            <div class="total">
+                <p>검색결과 <span class="cnt">39</span>개</p>
+            </div>
+            <div class="contWrap">
+                <ul>
+                </ul>
+            </div>
+            <div id="popWrap" style="display: none; opacity: 0;">
+                <h3>'<span class="cateName">전체</span>' <span class="swiper-pagination pop_pg"></span></h3>
+                <div class="popCont swiper-container">
+                    <ul class="swiper-wrapper"></ul>
                 </div>
-                <div class="cont_rt fade fadeRt delay4">
-                    <div class="rtTop">
-                        <p>견고하고 신뢰도 높은 웹 제작 경험 4년 이상의 퍼블리셔입니다.<br/>다양한 기술을 활용해 비즈니스 문제 해결과 업무 효율 향상에 관심이 많습니다.<br/>도전에 유연하고, 호기심이 많아 배움을 멈추지 않습니다.</p>
-                    </div>  
-                    <div class="rtMid">
-                        <ul>
-                            <li><i class="fa-solid fa-check"></i>웹/앱(웹뷰) 서비스의 프론트엔드 UI 개발, 운영 경험</li>
-                            <li><i class="fa-solid fa-check"></i>다수의 UI 구현 경험으로 사용자 인터렉션에 대한 높은 이해도</li>
-                            <li><i class="fa-solid fa-check"></i>디자인, 퍼블리싱 파트 리딩 및 다양한 팀과의 협업 경험</li>
-                        </ul>
-                    </div>
-                    <div class="btn">
-                        <a href="/project" alt="PROJECT">참여프로젝트</a>
-                        <a href="/portfolio" alt="PORTFOLIO">포트폴리오</a>
-                    </div>
+                <div class="swiper-button-next pop_next"></div>
+                <div class="swiper-button-prev pop_prev"></div>
+                <div class="pop_close">
+                    <img src="/design/duduworld/220906/ico_close.png">
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="sec03">
-        <div class="inner">
-            <div class="title fade fadeTop delay1">보유기술</div>
-            <div class="technic">
-                <div class="techTop fade fadeTop delay1">
-                    <div class="tech-item tech01">
-                        <h2>퍼블리싱</h2>
-                        <ul>
-                            <li>
-                                <span class="tName">HTML</span>
+            <!- - 안보이는 영역 - ->
+            <div class="dataWrap">
+                <ul>
+                    <li onclick="listClisk(this);" class="contBx cate2 fade fadeTop delay1 swiper-slide">
+                        <div class="slider">
+                            <div class="imgWrap">
+                                <img src="./img/img_25.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="txtWrap">
+                            <div class="txtBx">
+                                <div class="tit">퍼블리싱</div>
                                 <div class="tPer">
                                     <div class="box w100"></div>
                                 </div>
-                            </li>
-                            <li>
-                                <span class="tName">CSS</span>
+                                <div class="info">
+                                    PC+MO 메이크샵 스킨 적용 및 디자인 커스텀 퍼블리싱 작업
+                                </div>
+                            </div>
+                            <p class="writer">
+                                미즈온
+                            </p>
+                        </div>
+                    </li>
+                    <li onclick="listClisk(this);" class="contBx cate1 fade fadeTop delay1 swiper-slide">
+                        <div class="slider">
+                            <div class="imgWrap">
+                                <img src="./img/img_24.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="txtWrap">
+                            <div class="txtBx">
+                                <div class="tit">퍼블리싱</div>
                                 <div class="tPer">
                                     <div class="box w100"></div>
                                 </div>
-                            </li>
-                            <li>
-                                <span class="tName">Javascript, jQuery</span>
+                                <div class="info">
+                                    PC+MO 공주시 운영 상품 판매 페이지 CMS 이전 및 커스텀 퍼블리싱 작업
+                                </div>
+                            </div>
+                            <p class="writer">
+                                고맛나루장터
+                            </p>
+                        </div>
+                    </li>
+                    <li onclick="listClisk(this);" class="contBx cate1 fade fadeTop delay1 swiper-slide">
+                        <div class="slider">
+                            <div class="imgWrap">
+                                <img src="./img/img_23.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="txtWrap">
+                            <div class="txtBx">
+                                <div class="tit">퍼블리싱</div>
+                                <div class="tPer">
+                                    <div class="box w100"></div>
+                                </div>
+                                <div class="info">
+                                    PC+MO 메이크샵 CMS에 맞춰 디자인 이전 및 커스텀 퍼블리싱 작업
+                                </div>
+                            </div>
+                            <p class="writer">
+                                디엠코스메틱
+                            </p>
+                        </div>
+                    </li>
+                    <li onclick="listClisk(this);" class="contBx cate2 fade fadeTop delay1 swiper-slide">
+                        <div class="slider">
+                            <div class="imgWrap">
+                                <img src="./img/img_22.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="txtWrap">
+                            <div class="txtBx">
+                                <div class="tit">퍼블리싱</div>
+                                <div class="tPer">
+                                    <div class="box w20"></div>
+                                </div>
+                                <div class="info">
+                                    PC+MO 메인페이지 지역 별 매장 위치 퍼블리싱 작업
+                                </div>
+                            </div>
+                            <p class="writer">
+                                글로리가구
+                            </p>
+                        </div>
+                    </li>
+                    <li onclick="listClisk(this);" class="contBx cate2 fade fadeTop delay1 swiper-slide">
+                        <div class="slider">
+                            <div class="imgWrap">
+                                <img src="./img/img_21.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="txtWrap">
+                            <div class="txtBx">
+                                <div class="tit">퍼블리싱</div>
+                                <div class="tPer">
+                                    <div class="box w20"></div>
+                                </div>
+                                <div class="info">
+                                    PC+MO 메인페이지 신상품 영역 커스텀 퍼블리싱 작업
+                                </div>
+                            </div>
+                            <p class="writer">
+                                엘칸토
+                            </p>
+                        </div>
+                    </li>
+                    <li onclick="listClisk(this);" class="contBx cate2 fade fadeTop delay1 swiper-slide">
+                        <div class="slider">
+                            <div class="imgWrap">
+                                <img src="./img/img_20.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="txtWrap">
+                            <div class="txtBx">
+                                <div class="tit">퍼블리싱</div>
+                                <div class="tPer">
+                                    <div class="box w20"></div>
+                                </div>
+                                <div class="info">
+                                    PC+MO 개별페이지 퍼블리싱 작업
+                                </div>
+                            </div>
+                            <p class="writer">
+                                쏘네추럴
+                            </p>
+                        </div>
+                    </li>
+                    <li onclick="listClisk(this);" class="contBx cate1 fade fadeTop delay1 swiper-slide">
+                        <div class="slider">
+                            <div class="imgWrap">
+                                <img src="./img/img_19.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="txtWrap">
+                            <div class="txtBx">
+                                <div class="tit">퍼블리싱</div>
+                                <div class="tPer">
+                                    <div class="box w100"></div>
+                                </div>
+                                <div class="info">
+                                    PC+MO 전체페이지 리뉴얼 퍼블리싱 작업
+                                </div>
+                            </div>
+                            <p class="writer">
+                                실리쿡
+                            </p>
+                        </div>
+                    </li>
+                    
+                    <li onclick="listClisk(this);" class="contBx cate2 fade fadeTop delay1 swiper-slide">
+                        <div class="slider">
+                            <div class="imgWrap">
+                                <img src="./img/img_18.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="txtWrap">
+                            <div class="txtBx">
+                                <div class="tit">퍼블리싱</div>
+                                <div class="tPer">
+                                    <div class="box w20"></div>
+                                </div>
+                                <div class="info">
+                                    PC+MO 기획전페이지 퍼블리싱 작업, 리뷰 기능추가 및 리뷰페이지 퍼블리싱 작업
+                                </div>
+                            </div>
+                            <p class="writer">
+                                하트박스
+                            </p>
+                        </div>
+                    </li>
+                    <li onclick="listClisk(this);" class="contBx cate2 fade fadeTop delay1 swiper-slide">
+                        <div class="slider">
+                            <div class="imgWrap">
+                                <img src="./img/img_17.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="txtWrap">
+                            <div class="txtBx">
+                                <div class="tit">퍼블리싱</div>
+                                <div class="tPer">
+                                    <div class="box w90"></div>
+                                </div>
+                                <div class="info">
+                                    PC+MO 메인,분류,상세 페이지 디자인 리뉴얼 퍼블리싱 작업
+                                </div>
+                            </div>
+                            <p class="writer">
+                                도밍고블루
+                            </p>
+                        </div>
+                    </li>
+                    <li onclick="listClisk(this);" class="contBx cate2 fade fadeTop delay1 swiper-slide">
+                        <div class="slider">
+                            <div class="imgWrap">
+                                <img src="./img/img_16.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="txtWrap">
+                            <div class="txtBx">
+                                <div class="tit">퍼블리싱</div>
+                                <div class="tPer">
+                                    <div class="box w50"></div>
+                                </div>
+                                <div class="info">
+                                    PC+MO 메인페이지 디자인 리뉴얼 퍼블리싱 작업
+                                </div>
+                            </div>
+                            <p class="writer">
+                                오브베이스
+                            </p>
+                        </div>
+                    </li>
+                    <li onclick="listClisk(this);" class="contBx cate2 fade fadeTop delay1 swiper-slide">
+                        <div class="slider">
+                            <div class="imgWrap">
+                                <img src="./img/img_15.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="txtWrap">
+                            <div class="txtBx">
+                                <div class="tit">퍼블리싱</div>
+                                <div class="tPer">
+                                    <div class="box w30"></div>
+                                </div>
+                                <div class="info">
+                                    PC+MO 상세페이지 디자인 리뉴얼 퍼블리싱 작업
+                                </div>
+                            </div>
+                            <p class="writer">
+                                디그
+                            </p>
+                        </div>
+                    </li>
+                    <li onclick="listClisk(this);" class="contBx cate1 fade fadeTop delay1 swiper-slide">
+                        <div class="slider">
+                            <div class="imgWrap">
+                                <img src="./img/img_14.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="txtWrap">
+                            <div class="txtBx">
+                                <div class="tit">퍼블리싱</div>
+                                <div class="tPer">
+                                    <div class="box w100"></div>
+                                </div>
+                                <div class="info">
+                                    PC+MO 메이크샵 스킨 적용 및 디자인 커스텀 퍼블리싱 작업
+                                </div>
+                            </div>
+                            <p class="writer">
+                                네이처오다
+                            </p>
+                        </div>
+                    </li>
+                    <li onclick="listClisk(this);" class="contBx cate1 fade fadeTop delay1 swiper-slide">
+                        <div class="slider">
+                            <div class="imgWrap">
+                                <img src="./img/img_13.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="txtWrap">
+                            <div class="txtBx">
+                                <div class="tit">퍼블리싱</div>
+                                <div class="tPer">
+                                    <div class="box w100"></div>
+                                </div>
+                                <div class="info">
+                                    PC+MO 메이크샵 스킨 적용 및 디자인 커스텀 퍼블리싱 작업
+                                </div>
+                            </div>
+                            <p class="writer">
+                                푸르농
+                            </p>
+                        </div>
+                    </li>
+                    <li onclick="listClisk(this);" class="contBx cate1 fade fadeTop delay1 swiper-slide">
+                        <div class="slider">
+                            <div class="imgWrap">
+                                <img src="./img/img_12.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="txtWrap">
+                            <div class="txtBx">
+                                <div class="tit">퍼블리싱</div>
+                                <div class="tPer">
+                                    <div class="box w100"></div>
+                                </div>
+                                <div class="info">
+                                    PC+MO 전체페이지 디자인 리뉴얼 퍼블리싱 작업
+                                </div>
+                            </div>
+                            <p class="writer">
+                                근육맨닷컴
+                            </p>
+                        </div>
+                    </li>
+                    <li onclick="listClisk(this);" class="contBx cate2 fade fadeTop delay1 swiper-slide">
+                        <div class="slider">
+                            <div class="imgWrap">
+                                <img src="./img/img_11.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="txtWrap">
+                            <div class="txtBx">
+                                <div class="tit">퍼블리싱</div>
                                 <div class="tPer">
                                     <div class="box w80"></div>
                                 </div>
-                            </li>
-                            <li>
-                                <span class="tName">React, Vue.js</span>
-                                <div class="tPer">
-                                    <div class="box w70"></div>
+                                <div class="info">
+                                    PC+MO 메인,상세 페이지 디자인 커스텀 퍼블리싱 작업, 네이버페이 기능 추가
                                 </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="tech-item tech02">
-                        <h2>디자인</h2>
-                        <ul>
-                            <li>
-                                <span class="tName">Photoshop</span>
-                                <div class="tPer">
-                                    <div class="box w80"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <span class="tName">Illustrator</span>
-                                <div class="tPer">
-                                    <div class="box w80"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <span class="tName">XD</span>
-                                <div class="tPer">
-                                    <div class="box w60"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <span class="tName">Figma</span>
-                                <div class="tPer">
-                                    <div class="box w70"></div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="techBtm">
-                    <div class="cont1 fade scale delay2">
-                        <h2 class="tit">라이브러리</h2>
-                        <div class="cont">
-                            <ul>
-                                <li>Boostrap</li>
-                                <li>DataTables</li>
-                                <li>Fullpage.js</li>
-                                <li>Animation(AOS, Animete, …)</li>
-                                <li>Slide(Owl, Slick, …)</li>
-                                <li>typeit</li>
-                            </ul>
+                            </div>
+                            <p class="writer">
+                                위뜨
+                            </p>
                         </div>
-                    </div>
-                    <div class="cont2 fade scale delay2">
-                        <h2 class="tit">형상 관리</h2>
-                        <div class="cont">
-                            <ul>
-                                <li>Git</li>
-                                <li>SVN</li>
-                                <li>CVS</li>
-                            </ul>
+                    </li>
+                    <li onclick="listClisk(this);" class="contBx cate1 fade fadeTop delay1 swiper-slide">
+                        <div class="slider">
+                            <div class="imgWrap">
+                                <img src="./img/img_10.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                            </div>
                         </div>
-                    </div>
-                    <div class="cont3 fade scale delay2">
-                        <h2 class="tit">워드프레스</h2>
-                        <div class="cont">
-                            <ul>
-                                <li>makeshop</li>
-                                <li>카페24</li>
-                                <li>고도몰</li>
-                            </ul>
+                        <div class="txtWrap">
+                            <div class="txtBx">
+                                <div class="tit">퍼블리싱</div>
+                                <div class="tPer">
+                                    <div class="box w100"></div>
+                                </div>
+                                <div class="info">
+                                    PC+MO 메이크샵 CMS에 맞춰 디자인 이전 및 커스텀 퍼블리싱 작업
+                                </div>
+                            </div>
+                            <p class="writer">
+                                RMK
+                            </p>
                         </div>
-                    </div>
-                    <div class="cont4 fade scale delay2">
-                        <h2 class="tit">협업 / 관리</h2>
-                        <div class="cont">
-                            <ul>
-                                <li>Jira</li>
-                                <li>Slack</li>
-                                <li>notion</li>
-                                <li>PowerPoint</li>
-                                <li>Excel</li>
-                                <li>Word</li>
-                            </ul>
+                    </li>
+                    <li onclick="listClisk(this);" class="contBx cate2 fade fadeTop delay1 swiper-slide">
+                        <div class="slider">
+                            <div class="imgWrap">
+                                <img src="./img/img_9.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="sec04">
-        <div class="inner">
-            <div class="title fade fadeTop delay1">교육 이수/자격증</div>
-            <div class="licence">
-                <div class="wrap fade scale delay2">
-                    <h2>퍼블리싱(UI 개발) 교육</h2>
-                    <ul>
-                        <li>
-                            <div class="tit">웹퍼블리셔(자바스크립트+제이쿼리)</div>
-                            <div class="info">
-                                <span class="date">2021-06-12 - 2021-07-24</span><span>더조은컴퓨터학원</span>
+                        <div class="txtWrap">
+                            <div class="txtBx">
+                                <div class="tit">퍼블리싱</div>
+                                <div class="tPer">
+                                    <div class="box w20"></div>
+                                </div>
+                                <div class="info">
+                                    PC+MO 메인페이지 영상 슬라이드 영역 퍼블리싱 작업
+                                </div>
                             </div>
-                        </li>
-                        <li>
-                            <div class="tit">SW서비스 융합기획과 시큐어코딩 전문가 과정</div>
-                            <div class="info">
-                                <span class="date">2017-05-10 - 2017-08-10</span><span>사단법인한국융합기술진흥원</span>
+                            <p class="writer">
+                                에이집몰
+                            </p>
+                        </div>
+                    </li>
+                    
+                    <li onclick="listClisk(this);" class="contBx cate1 fade fadeTop delay1 swiper-slide">
+                        <div class="slider">
+                            <div class="imgWrap">
+                                <img src="./img/img_8.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
                             </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="wrap fade scale delay2">
-                    <h2>기타 교육</h2>
-                    <ul>
-                        <li>
-                            <div class="tit">빅데이터 기반 지능형SW 및 MLOps 개발자 양성과정</div>
-                            <div class="info">
-                                <span class="date">2023-08-14 - 2024-02-14</span><span>플레이데이터평생교육원</span>
+                        </div>
+                        <div class="txtWrap">
+                            <div class="txtBx">
+                                <div class="tit">퍼블리싱</div>
+                                <div class="tPer">
+                                    <div class="box w100"></div>
+                                </div>
+                                <div class="info">
+                                    PC+MO 메이크샵 CMS에 맞춰 디자인 이전 및 커스텀 퍼블리싱 작업
+                                </div>
                             </div>
-                        </li>
-                        <li>
-                            <div class="tit">4차 산업 인문융합 빅데이터 분석 기획자</div>
-                            <div class="info">
-                                <span class="date">2018-05-16 - 2018-07-11</span><span>사단법인한국융합기술진흥원</span>
+                            <p class="writer">
+                                이즈앤트리
+                            </p>
+                        </div>
+                    </li>
+                    <li onclick="listClisk(this);" class="contBx cate1 fade fadeTop delay1 swiper-slide">
+                        <div class="slider">
+                            <div class="imgWrap">
+                                <img src="./img/img_6.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
                             </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="wrap fade scale delay2">
-                    <h2>자격증</h2>
-                    <ul>
-                        <li>
-                            <div class="tit">정보처리기사/필기합격</div>
-                            <div class="info">
-                                <span class="date">2024.03</span><span>한국산업인력공단</span>
+                        </div>
+                        <div class="txtWrap">
+                            <div class="txtBx">
+                                <div class="tit">퍼블리싱</div>
+                                <div class="tPer">
+                                    <div class="box w100"></div>
+                                </div>
+                                <div class="info">
+                                    PC+MO 메이크샵 스킨 적용 및 디자인 커스텀 퍼블리싱 작업
+                                </div>
                             </div>
-                        </li>
-                        <li>
-                            <div class="tit">SQL 개발자(SQLD)</div>
-                            <div class="info">
-                            <span class="date">2023.12.15</span><span>한국데이터산업진흥원</span>
+                            <p class="writer">
+                                맥세이버
+                            </p>
+                        </div>
+                    </li>
+                    <li onclick="listClisk(this);" class="contBx cate1 fade fadeTop delay1 swiper-slide">
+                        <div class="slider">
+                            <div class="imgWrap">
+                                <img src="./img/img_5.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
                             </div>
-                        </li>
-                        <li>
-                            <div class="tit">데이터분석 준전문가(ADsP)</div>
-                            <div class="info">
-                            <span class="date">2023.11.17</span><span>한국데이터산업진흥원</span>
+                        </div>
+                        <div class="txtWrap">
+                            <div class="txtBx">
+                                <div class="tit">퍼블리싱</div>
+                                <div class="tPer">
+                                    <div class="box w100"></div>
+                                </div>
+                                <div class="info">
+                                    PC+MO 메이크샵 CMS에 맞춰 디자인 이전 및 커스텀 퍼블리싱 작업
+                                </div>
                             </div>
-                        </li>
-                        <li>
-                            <div class="tit">ACA Illustrator CC 2015</div>
-                            <div class="info">
-                            <span class="date">2017.12.07</span><span>Adobe</span>
+                            <p class="writer">
+                                메종프렌치오브제
+                            </p>
+                        </div>
+                    </li>
+                    <li onclick="listClisk(this);" class="contBx cate1 fade fadeTop delay1 swiper-slide">
+                        <div class="slider">
+                            <div class="imgWrap">
+                                <img src="./img/img_4.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
                             </div>
-                        </li>
-                        <li>
-                            <div class="tit">시큐어코딩 전문가</div>
-                            <div class="info">
-                            <span class="date">2017.08.10</span><span>한국융합기술진흥원</span>
+                        </div>
+                        <div class="txtWrap">
+                            <div class="txtBx">
+                                <div class="tit">퍼블리싱</div>
+                                <div class="tPer">
+                                    <div class="box w100"></div>
+                                </div>
+                                <div class="info">
+                                    PC+MO 메이크샵 스킨 적용 및 디자인 커스텀 퍼블리싱 작업
+                                </div>
                             </div>
-                        </li>
-                        <li>
-                            <div class="tit">ACA Photoshop CS6</div>
-                            <div class="info">
-                            <span class="date">2017.06.17</span><span>Adobe</span>
+                            <p class="writer">
+                                드레스폼
+                            </p>
+                        </div>
+                    </li>
+                    <li onclick="listClisk(this);" class="contBx cate1 fade fadeTop delay1 swiper-slide">
+                        <div class="slider">
+                            <div class="imgWrap">
+                                <img src="./img/img_3.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
                             </div>
-                        </li>
-                    </ul>
-                </div>
+                        </div>
+                        <div class="txtWrap">
+                            <div class="txtBx">
+                                <div class="tit">퍼블리싱</div>
+                                <div class="tPer">
+                                    <div class="box w100"></div>
+                                </div>
+                                <div class="info">
+                                    PC+MO 전체페이지 디자인 리뉴얼 퍼블리싱 작업
+                                </div>
+                            </div>
+                            <p class="writer">
+                                TirrLirr
+                            </p>
+                        </div>
+                    </li>
+                    <li onclick="listClisk(this);" class="contBx cate1 fade fadeTop delay1 swiper-slide">
+                        <div class="slider">
+                            <div class="imgWrap">
+                                <img src="./img/img_2.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="txtWrap">
+                            <div class="txtBx">
+                                <div class="tit">퍼블리싱</div>
+                                <div class="tPer">
+                                    <div class="box w100"></div>
+                                </div>
+                                <div class="info">
+                                    PC+MO 메이크샵 CMS에 맞춰 디자인 이전 및 커스텀 퍼블리싱 작업
+                                </div>
+                            </div>
+                            <p class="writer">
+                                쌤몰
+                            </p>
+                        </div>
+                    </li>
+                    <li onclick="listClisk(this);" class="contBx cate1 fade fadeTop delay1 swiper-slide">
+                        <div class="slider">
+                            <div class="imgWrap">
+                                <img src="./img/img_1.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="txtWrap">
+                            <div class="txtBx">
+                                <div class="tit">퍼블리싱</div>
+                                <div class="tPer">
+                                    <div class="box w100"></div>
+                                </div>
+                                <div class="info">
+                                    PC+MO 메이크샵 CMS에 맞춰 디자인 이전 및 커스텀 퍼블리싱 작업
+                                </div>
+                            </div>
+                            <p class="writer">
+                                제이엘몰
+                            </p>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
@@ -295,33 +606,37 @@
         <div class="col3">
             <div class="sec01">
                 <div class="flogo">
-                    <div class="img"></div>
+                    <div class="img"><img src="https://cdn.example.com/img/logo.webp" alt="HYEMII 로고" loading="lazy"></div>
                     <div class="txt en">HYEMII</div>
                 </div>
             </div>
             <div class="sec02">
                 <div class="tit">바로가기</div>
                 <ul>
-                    <li><a href="/about" class="en on">ABOUT ME</a></li>
-                    <li><a href="/project" class="en">PROJECT</a></li>
-                    <li><a href="/portfolio" class="en">PORTFOLIO</a></li>
+                    <li><a href="about.html" class="en on">ABOUT ME</a></li>
+                    <li><a href="project.html" class="en">PROJECT</a></li>
+                    <li><a href="portfolio.html" class="en">PORTFOLIO</a></li>
                 </ul>
             </div>
             <div class="sec03">
-                <div class="tit">포트폴리오<a href="/portfolio">더보기 ></a></div>
-                <div class="cont">
-                </div>
+                <div class="tit">포트폴리오<a href="portfolio.html">더보기 ></a></div>
+                <div class="cont"></div>
             </div>
         </div>
     </footer>
     <div class="goTop">
         <div class="topBtn">TOP</div>
     </div>
+    <!-- 모달 시 스크롤 고정 -->
+    <div class="i-wrap"></div>
+    <div id="mask"></div>
     <div id="load">
         <div class="loading-container">
             <div class="loading"></div>
             <div id="loading-text">loading</div>
         </div>
     </div>
+    <script src="./js/common.js"></script>
+    <script src="./js/list.js"></script>
 </body>
 </html>

@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('load').style.display = 'none';
 
     //페이지 로드 시 fade에 on클래스 추가
-    document.querySelectorAll('.sec01 .fade, .sec02 .title').forEach(function(el) {
+    document.querySelectorAll('.sec01 .fade, .sec02 .label, .sec02 .title').forEach(function(el) {
         el.classList.add('on');
     });
 
