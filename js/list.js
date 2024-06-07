@@ -42,6 +42,23 @@ jQuery(".cateWrap li").on("click", function() {
 
     cnt = jQuery(".contWrap .contBx").length;
     jQuery(".total p .cnt").text(cnt);
+
+    jQuery(".contWrap li.contBx").removeClass('on');
+    jQuery('.contWrap li.contBx').each(function(index, element) {
+        var classes = element.className.split(' ');
+        for (var i = 0; i < classes.length; i++) {
+            if (classes[i].indexOf('delay') !== -1) {
+                jQuery(element).removeClass(classes[i]);
+            }
+        }
+        if ((index) % 3 === 0) {
+            jQuery(element).addClass('delay2');
+        } else if ((index) % 3 === 1) {
+            jQuery(element).addClass('delay3');
+        } else if ((index) % 3 === 2) {
+            jQuery(element).addClass('delay4');
+        }
+    });
 });
 
 // 전역변수로 초기화

@@ -53,6 +53,8 @@ header .hRight ul li a {color: #333;text-decoration: none;font-weight: 400;posit
 header .hRight ul li a:hover {color: #FF8C5B;}
 header .hRight ul li a::after {background: none repeat scroll 0 0 transparent;content: "";position: absolute;bottom: 0;height: 2px;left: 50%;background: #FF8C5B;border-radius: 10px;transition: width 0.3s ease 0s, left 0.3s ease 0s;width: 0;}
 header .hRight ul li a:hover::after {width: 100%;left: 0;}
+header .hRight ul li.on a {color: #FF8C5B;}
+header .hRight ul li.on a::after {background: none repeat scroll 0 0 transparent;content: "";position: absolute;bottom: 0;height: 2px;left: 50%;background: #FF8C5B;border-radius: 10px;transition: width 0.3s ease 0s, left 0.3s ease 0s;width: 0;}header .hRight ul li.on a::after {width: 100%;left: 0;}
 
 /* footer */
 footer {background: #F3EADA;padding: 50px 10%;color: #fff;/* border-top: 1px solid #F3EADA; */}
