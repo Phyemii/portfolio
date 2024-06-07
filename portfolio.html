@@ -12,6 +12,9 @@
     <!-- swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- typeIt-->
     <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
     <!-- icon -->
@@ -21,7 +24,6 @@
     <header class="flex">
         <div class="hLeft">
             <div class="logo">
-                <div class="img"><img src="https://cdn.example.com/img/logo.webp" alt="HYEMII 로고" loading="lazy"></div>
                 <div class="txt en">HYEMII</div>
             </div>
         </div>
@@ -64,15 +66,15 @@
     </section>
     <section class="sec02">
         <div class="inner">
-            <div class="cateWrap fade fadeTop delay1">
+            <div class="cateWrap title fade fadeTop delay2">
                 <ul>
                     <li class="active">ALL</li>
                     <li>전체 리뉴얼</li>
                     <li>부분 리뉴얼</li>
                 </ul>
             </div>
-            <div class="total">
-                <p>검색결과 <span class="cnt">39</span>개</p>
+            <div class="total title fade fadeTop delay2">
+                <p>총 <span class="cnt">39</span>개</p>
             </div>
             <div class="contWrap">
                 <ul>
@@ -86,16 +88,19 @@
                 <div class="swiper-button-next pop_next"></div>
                 <div class="swiper-button-prev pop_prev"></div>
                 <div class="pop_close">
-                    <img src="/design/duduworld/220906/ico_close.png">
+                    <img src="./img/ico_close.png">
                 </div>
             </div>
             <!- - 안보이는 영역 - ->
             <div class="dataWrap">
                 <ul>
-                    <li onclick="listClisk(this);" class="contBx cate2 fade fadeTop delay1 swiper-slide">
+                    <li onclick="listClick(this);" class="contBx cate2 fade fadeTop delay2 swiper-slide">
                         <div class="slider">
                             <div class="imgWrap">
-                                <img src="./img/img_25.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                                <picture>
+                                    <source srcset="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/471e8cc0-1de4-4d38-e6e3-bdc13bbba100/large" type="image/webp">
+                                    <img src="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/471e8cc0-1de4-4d38-e6e3-bdc13bbba100/large" alt="미즈온 메인페이지" loading="lazy">
+                                </picture>
                             </div>
                         </div>
                         <div class="txtWrap">
@@ -113,10 +118,13 @@
                             </p>
                         </div>
                     </li>
-                    <li onclick="listClisk(this);" class="contBx cate1 fade fadeTop delay1 swiper-slide">
+                    <li onclick="listClick(this);" class="contBx cate1 fade fadeTop delay3 swiper-slide">
                         <div class="slider">
                             <div class="imgWrap">
-                                <img src="./img/img_24.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                                <picture>
+                                    <source srcset="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/0a3907a7-655d-48f7-4843-bf8932593500/large" type="image/webp">
+                                    <img src="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/0a3907a7-655d-48f7-4843-bf8932593500/large" alt="고맛나루장터 메인페이지" loading="lazy">
+                                </picture>
                             </div>
                         </div>
                         <div class="txtWrap">
@@ -134,10 +142,13 @@
                             </p>
                         </div>
                     </li>
-                    <li onclick="listClisk(this);" class="contBx cate1 fade fadeTop delay1 swiper-slide">
+                    <li onclick="listClick(this);" class="contBx cate1 fade fadeTop delay4 swiper-slide">
                         <div class="slider">
                             <div class="imgWrap">
-                                <img src="./img/img_23.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                                <picture>
+                                    <source srcset="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/62ca78d4-3169-413f-3bc3-e294ad827500/large" type="image/webp">
+                                    <img src="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/62ca78d4-3169-413f-3bc3-e294ad827500/large" alt="디엠코스메틱 메인페이지" loading="lazy">
+                                </picture>
                             </div>
                         </div>
                         <div class="txtWrap">
@@ -155,10 +166,13 @@
                             </p>
                         </div>
                     </li>
-                    <li onclick="listClisk(this);" class="contBx cate2 fade fadeTop delay1 swiper-slide">
+                    <li onclick="listClick(this);" class="contBx cate2 fade fadeTop delay2 swiper-slide">
                         <div class="slider">
                             <div class="imgWrap">
-                                <img src="./img/img_22.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                                <picture>
+                                    <source srcset="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/c1cca13e-d040-4394-cc2b-474662885200/large" type="image/webp">
+                                    <img src="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/c1cca13e-d040-4394-cc2b-474662885200/large" alt="글로리가구 메인페이지" loading="lazy">
+                                </picture>
                             </div>
                         </div>
                         <div class="txtWrap">
@@ -176,10 +190,13 @@
                             </p>
                         </div>
                     </li>
-                    <li onclick="listClisk(this);" class="contBx cate2 fade fadeTop delay1 swiper-slide">
+                    <li onclick="listClick(this);" class="contBx cate2 fade fadeTop delay3 swiper-slide">
                         <div class="slider">
                             <div class="imgWrap">
-                                <img src="./img/img_21.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                                <picture>
+                                    <source srcset="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/86d6dba3-de1f-457d-78f2-6e165f041600/large" type="image/webp">
+                                    <img src="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/86d6dba3-de1f-457d-78f2-6e165f041600/large" alt="엘칸토 메인페이지" loading="lazy">
+                                </picture>
                             </div>
                         </div>
                         <div class="txtWrap">
@@ -197,10 +214,13 @@
                             </p>
                         </div>
                     </li>
-                    <li onclick="listClisk(this);" class="contBx cate2 fade fadeTop delay1 swiper-slide">
+                    <li onclick="listClick(this);" class="contBx cate2 fade fadeTop delay4 swiper-slide">
                         <div class="slider">
                             <div class="imgWrap">
-                                <img src="./img/img_20.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                                <picture>
+                                    <source srcset="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/4591cad6-3091-48fd-9f2a-b39b80a79300/large" type="image/webp">
+                                    <img src="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/4591cad6-3091-48fd-9f2a-b39b80a79300/large" alt="쏘네추럴 메인페이지" loading="lazy">
+                                </picture>
                             </div>
                         </div>
                         <div class="txtWrap">
@@ -218,10 +238,13 @@
                             </p>
                         </div>
                     </li>
-                    <li onclick="listClisk(this);" class="contBx cate1 fade fadeTop delay1 swiper-slide">
+                    <li onclick="listClick(this);" class="contBx cate1 fade fadeTop delay2 swiper-slide">
                         <div class="slider">
                             <div class="imgWrap">
-                                <img src="./img/img_19.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                                <picture>
+                                    <source srcset="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/7996e271-eea0-4a96-dbd7-35260db40f00/large" type="image/webp">
+                                    <img src="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/7996e271-eea0-4a96-dbd7-35260db40f00/large" alt="실리쿡 메인페이지" loading="lazy">
+                                </picture>
                             </div>
                         </div>
                         <div class="txtWrap">
@@ -240,10 +263,13 @@
                         </div>
                     </li>
                     
-                    <li onclick="listClisk(this);" class="contBx cate2 fade fadeTop delay1 swiper-slide">
+                    <li onclick="listClick(this);" class="contBx cate2 fade fadeTop delay3 swiper-slide">
                         <div class="slider">
                             <div class="imgWrap">
-                                <img src="./img/img_18.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                                <picture>
+                                    <source srcset="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/2e56e7f1-6b95-4099-aa24-9d444dee6a00/large" type="image/webp">
+                                    <img src="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/2e56e7f1-6b95-4099-aa24-9d444dee6a00/large" alt="하트박스 메인페이지" loading="lazy">
+                                </picture>
                             </div>
                         </div>
                         <div class="txtWrap">
@@ -261,10 +287,13 @@
                             </p>
                         </div>
                     </li>
-                    <li onclick="listClisk(this);" class="contBx cate2 fade fadeTop delay1 swiper-slide">
+                    <li onclick="listClick(this);" class="contBx cate2 fade fadeTop delay4 swiper-slide">
                         <div class="slider">
                             <div class="imgWrap">
-                                <img src="./img/img_17.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                                <picture>
+                                    <source srcset="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/5191f4a1-6d82-4c16-d551-b6cff4a43f00/large" type="image/webp">
+                                    <img src="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/5191f4a1-6d82-4c16-d551-b6cff4a43f00/large" alt="도밍고 메인페이지" loading="lazy">
+                                </picture>
                             </div>
                         </div>
                         <div class="txtWrap">
@@ -282,10 +311,13 @@
                             </p>
                         </div>
                     </li>
-                    <li onclick="listClisk(this);" class="contBx cate2 fade fadeTop delay1 swiper-slide">
+                    <li onclick="listClick(this);" class="contBx cate2 fade fadeTop delay2 swiper-slide">
                         <div class="slider">
                             <div class="imgWrap">
-                                <img src="./img/img_16.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                                <picture>
+                                    <source srcset="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/138819fc-b298-4968-dcf2-10ec86e57b00/large" type="image/webp">
+                                    <img src="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/138819fc-b298-4968-dcf2-10ec86e57b00/large" alt="오브베이스 메인페이지" loading="lazy">
+                                </picture>
                             </div>
                         </div>
                         <div class="txtWrap">
@@ -303,10 +335,13 @@
                             </p>
                         </div>
                     </li>
-                    <li onclick="listClisk(this);" class="contBx cate2 fade fadeTop delay1 swiper-slide">
+                    <li onclick="listClick(this);" class="contBx cate2 fade fadeTop delay3 swiper-slide">
                         <div class="slider">
                             <div class="imgWrap">
-                                <img src="./img/img_15.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                                <picture>
+                                    <source srcset="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/83197c96-1b92-4e9f-4b8e-bc244581c400/large" type="image/webp">
+                                    <img src="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/83197c96-1b92-4e9f-4b8e-bc244581c400/large" alt="디그 메인페이지" loading="lazy">
+                                </picture>
                             </div>
                         </div>
                         <div class="txtWrap">
@@ -324,10 +359,13 @@
                             </p>
                         </div>
                     </li>
-                    <li onclick="listClisk(this);" class="contBx cate1 fade fadeTop delay1 swiper-slide">
+                    <li onclick="listClick(this);" class="contBx cate1 fade fadeTop delay4 swiper-slide">
                         <div class="slider">
                             <div class="imgWrap">
-                                <img src="./img/img_14.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                                <picture>
+                                    <source srcset="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/364a66aa-8f58-4bb1-d41b-b5c1ef64bc00/large" type="image/webp">
+                                    <img src="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/364a66aa-8f58-4bb1-d41b-b5c1ef64bc00/large" alt="네이처오다 메인페이지" loading="lazy">
+                                </picture>
                             </div>
                         </div>
                         <div class="txtWrap">
@@ -345,10 +383,13 @@
                             </p>
                         </div>
                     </li>
-                    <li onclick="listClisk(this);" class="contBx cate1 fade fadeTop delay1 swiper-slide">
+                    <li onclick="listClick(this);" class="contBx cate1 fade fadeTop delay2 swiper-slide">
                         <div class="slider">
                             <div class="imgWrap">
-                                <img src="./img/img_13.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                                <picture>
+                                    <source srcset="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/581ef8d4-20cd-4582-1c8c-fd4a4d428100/large" type="image/webp">
+                                    <img src="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/581ef8d4-20cd-4582-1c8c-fd4a4d428100/large" alt="푸르농 메인페이지" loading="lazy">
+                                </picture>
                             </div>
                         </div>
                         <div class="txtWrap">
@@ -366,10 +407,13 @@
                             </p>
                         </div>
                     </li>
-                    <li onclick="listClisk(this);" class="contBx cate1 fade fadeTop delay1 swiper-slide">
+                    <li onclick="listClick(this);" class="contBx cate1 fade fadeTop delay3 swiper-slide">
                         <div class="slider">
                             <div class="imgWrap">
-                                <img src="./img/img_12.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                                <picture>
+                                    <source srcset="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/e76eb28c-7459-4c83-c5d4-fc2abd695b00/large" type="image/webp">
+                                    <img src="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/e76eb28c-7459-4c83-c5d4-fc2abd695b00/large" alt="근육맨닷컴 메인페이지" loading="lazy">
+                                </picture>
                             </div>
                         </div>
                         <div class="txtWrap">
@@ -387,10 +431,13 @@
                             </p>
                         </div>
                     </li>
-                    <li onclick="listClisk(this);" class="contBx cate2 fade fadeTop delay1 swiper-slide">
+                    <li onclick="listClick(this);" class="contBx cate2 fade fadeTop delay4 swiper-slide">
                         <div class="slider">
                             <div class="imgWrap">
-                                <img src="./img/img_11.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                                <picture>
+                                    <source srcset="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/a542589d-d704-47c8-c40e-3935897f6d00/large" type="image/webp">
+                                    <img src="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/a542589d-d704-47c8-c40e-3935897f6d00/large" alt="위뜨 메인페이지" loading="lazy">
+                                </picture>
                             </div>
                         </div>
                         <div class="txtWrap">
@@ -408,10 +455,13 @@
                             </p>
                         </div>
                     </li>
-                    <li onclick="listClisk(this);" class="contBx cate1 fade fadeTop delay1 swiper-slide">
+                    <li onclick="listClick(this);" class="contBx cate1 fade fadeTop delay2 swiper-slide">
                         <div class="slider">
                             <div class="imgWrap">
-                                <img src="./img/img_10.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                                <picture>
+                                    <source srcset="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/691fd9f9-b02e-47f1-a36c-5aec6aa2e900/large" type="image/webp">
+                                    <img src="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/691fd9f9-b02e-47f1-a36c-5aec6aa2e900/large" alt="RMK 메인페이지" loading="lazy">
+                                </picture>
                             </div>
                         </div>
                         <div class="txtWrap">
@@ -429,10 +479,13 @@
                             </p>
                         </div>
                     </li>
-                    <li onclick="listClisk(this);" class="contBx cate2 fade fadeTop delay1 swiper-slide">
+                    <li onclick="listClick(this);" class="contBx cate2 fade fadeTop delay3 swiper-slide">
                         <div class="slider">
                             <div class="imgWrap">
-                                <img src="./img/img_9.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                                <picture>
+                                    <source srcset="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/b25124d3-d176-4807-b002-3020634d7700/large" type="image/webp">
+                                    <img src="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/b25124d3-d176-4807-b002-3020634d7700/large" alt="에이집몰 메인페이지" loading="lazy">
+                                </picture>
                             </div>
                         </div>
                         <div class="txtWrap">
@@ -451,10 +504,13 @@
                         </div>
                     </li>
                     
-                    <li onclick="listClisk(this);" class="contBx cate1 fade fadeTop delay1 swiper-slide">
+                    <li onclick="listClick(this);" class="contBx cate1 fade fadeTop delay4 swiper-slide">
                         <div class="slider">
                             <div class="imgWrap">
-                                <img src="./img/img_8.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                                <picture>
+                                    <source srcset="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/c2936d4c-f0d2-47f6-89d1-ace22e79dd00/large" type="image/webp">
+                                    <img src="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/c2936d4c-f0d2-47f6-89d1-ace22e79dd00/large" alt="이즈앤트리 메인페이지" loading="lazy">
+                                </picture>
                             </div>
                         </div>
                         <div class="txtWrap">
@@ -472,10 +528,13 @@
                             </p>
                         </div>
                     </li>
-                    <li onclick="listClisk(this);" class="contBx cate1 fade fadeTop delay1 swiper-slide">
+                    <li onclick="listClick(this);" class="contBx cate1 fade fadeTop delay2 swiper-slide">
                         <div class="slider">
                             <div class="imgWrap">
-                                <img src="./img/img_6.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                                <picture>
+                                    <source srcset="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/f84c68f2-ab28-4e6b-5442-efafec548700/large" type="image/webp">
+                                    <img src="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/f84c68f2-ab28-4e6b-5442-efafec548700/large" alt="맥세이버 메인페이지" loading="lazy">
+                                </picture>
                             </div>
                         </div>
                         <div class="txtWrap">
@@ -493,10 +552,13 @@
                             </p>
                         </div>
                     </li>
-                    <li onclick="listClisk(this);" class="contBx cate1 fade fadeTop delay1 swiper-slide">
+                    <li onclick="listClick(this);" class="contBx cate1 fade fadeTop delay3 swiper-slide">
                         <div class="slider">
                             <div class="imgWrap">
-                                <img src="./img/img_5.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                                <picture>
+                                    <source srcset="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/9884275c-e563-4131-6e0d-76f6da5c9000/large" type="image/webp">
+                                    <img src="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/9884275c-e563-4131-6e0d-76f6da5c9000/large" alt="메종 메인페이지" loading="lazy">
+                                </picture>
                             </div>
                         </div>
                         <div class="txtWrap">
@@ -514,10 +576,13 @@
                             </p>
                         </div>
                     </li>
-                    <li onclick="listClisk(this);" class="contBx cate1 fade fadeTop delay1 swiper-slide">
+                    <li onclick="listClick(this);" class="contBx cate1 fade fadeTop delay4 swiper-slide">
                         <div class="slider">
                             <div class="imgWrap">
-                                <img src="./img/img_4.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                                <picture>
+                                    <source srcset="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/491f7219-0bb9-4554-ed72-f4ee19d38b00/large" type="image/webp">
+                                    <img src="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/491f7219-0bb9-4554-ed72-f4ee19d38b00/large" alt="드레스폼 메인페이지" loading="lazy">
+                                </picture>
                             </div>
                         </div>
                         <div class="txtWrap">
@@ -535,10 +600,13 @@
                             </p>
                         </div>
                     </li>
-                    <li onclick="listClisk(this);" class="contBx cate1 fade fadeTop delay1 swiper-slide">
+                    <li onclick="listClick(this);" class="contBx cate1 fade fadeTop delay2 swiper-slide">
                         <div class="slider">
                             <div class="imgWrap">
-                                <img src="./img/img_3.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                                <picture>
+                                    <source srcset="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/78f85afc-93bb-4c6e-4bab-3ed0595c2000/large" type="image/webp">
+                                    <img src="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/78f85afc-93bb-4c6e-4bab-3ed0595c2000/large" alt="tirrlirr 메인페이지" loading="lazy">
+                                </picture>
                             </div>
                         </div>
                         <div class="txtWrap">
@@ -556,10 +624,13 @@
                             </p>
                         </div>
                     </li>
-                    <li onclick="listClisk(this);" class="contBx cate1 fade fadeTop delay1 swiper-slide">
+                    <li onclick="listClick(this);" class="contBx cate1 fade fadeTop delay3 swiper-slide">
                         <div class="slider">
                             <div class="imgWrap">
-                                <img src="./img/img_2.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                                <picture>
+                                    <source srcset="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/4c5d646a-1934-497f-8bf2-1809a538de00/large" type="image/webp">
+                                    <img src="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/4c5d646a-1934-497f-8bf2-1809a538de00/large" alt="쌤몰 메인페이지" loading="lazy">
+                                </picture>
                             </div>
                         </div>
                         <div class="txtWrap">
@@ -577,10 +648,13 @@
                             </p>
                         </div>
                     </li>
-                    <li onclick="listClisk(this);" class="contBx cate1 fade fadeTop delay1 swiper-slide">
+                    <li onclick="listClick(this);" class="contBx cate1 fade fadeTop delay4 swiper-slide">
                         <div class="slider">
                             <div class="imgWrap">
-                                <img src="./img/img_1.png" alt="냉동실에 지저분한 봉지들 정리에 딱 입니다" loading="lazy">
+                                <picture>
+                                    <source srcset="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/43a3dd92-751a-48d1-cd72-7e72748deb00/large" type="image/webp">
+                                    <img src="https://imagedelivery.net/2f_IrsK2WDEKqiSD88sRRA/43a3dd92-751a-48d1-cd72-7e72748deb00/large" alt="제이엘몰 메인페이지" loading="lazy">
+                                </picture>
                             </div>
                         </div>
                         <div class="txtWrap">
@@ -606,7 +680,6 @@
         <div class="col3">
             <div class="sec01">
                 <div class="flogo">
-                    <div class="img"><img src="https://cdn.example.com/img/logo.webp" alt="HYEMII 로고" loading="lazy"></div>
                     <div class="txt en">HYEMII</div>
                 </div>
             </div>
